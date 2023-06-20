@@ -1,0 +1,81 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: rgb(233, 233, 233);
+}
+.title {
+  font-size: 30px;
+  font-weight: 600;
+  color: white;
+  background-color: rgb(19, 19, 56);
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form-input {
+  border: none;
+  outline: none;
+  background-color: white;
+  padding: 10px 20px;
+  border: 1px solid grey;
+  margin-right: 20px;
+}
+.form-input:focus {
+  background-color: white;
+}
+.search {
+  border: none;
+  outline: none;
+  background-color: rgb(19, 19, 56);
+  color: white;
+  font-family: inherit;
+  padding: 10px 20px;
+}
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px;
+}
+#movie-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.card {
+  box-shadow: 5px 5px 15px black;
+  width: 700px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background-color: rgb(24, 51, 59);
+  margin: 20px;
+  padding: 30px;
+}
+.card img {
+  box-shadow: 1px 1px 10px white;
+}
+.movie-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  margin: 10px 150px;
+}
+.value {
+  font-size: 15px;
+  width: 200px;
+}
