@@ -1,22 +1,24 @@
 const API_URL = "http://www.omdbapi.com/?i=tt3896198&apikey=95c8f87f&s=";
 const API_URL_SEARCH = "http://www.omdbapi.com/?apikey=95c8f87f&i=";
 
-var search_input = document.getElementById("search-input").value;
 var cards = document.getElementById("movie-cards");
 
-document.querySelector(".search").addEventListener("click", function (e) {
-  console.log(search_input);
-  const query = search_input;
+document.getElementById("search").addEventListener("click", async function (e) {
+  e.preventDefault();
+  const query = document.getElementById("search-input").value;
   if (query) {
-    getMovies(API_URL + query);
+    await getMovies(API_URL + query);
   }
 });
 
 async function getMovies(url) {
   const res = await fetch(url);
   const resData = await res.json();
-  console.log(resData);
-  showMovies(resData.Search);
+  if (resData.Response !== "False") {
+    showMovies(resData.Search);
+  } else {
+    cards.innerHTML = `<h3>${resData.Error}</h3>`;
+  }
 }
 
 function showMovies(movies) {

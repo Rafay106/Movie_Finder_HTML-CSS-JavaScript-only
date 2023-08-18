@@ -34,7 +34,7 @@ main {
 .form-input:focus {
   background-color: white;
 }
-.search {
+#search {
   border: none;
   outline: none;
   background-color: rgb(19, 19, 56);
